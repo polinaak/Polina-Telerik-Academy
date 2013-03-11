@@ -14,13 +14,13 @@ namespace _01SchoolHierarchy
 
         //Constructors
         public Person(string name)
+            :this(name, null)
         {
-            this.name = name;
+           
         }
-
         public Person(string name, string comment)
-            :this (name)
             {
+                this.name = name;
                 this.comment = comment;
             }
 

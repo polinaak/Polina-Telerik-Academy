@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_01SchoolHierarchy.Discipline">
+    <Position X="1.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAQAgAAEAAAAACAAAAAgA=</HashCode>
+      <FileName>Discipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01SchoolHierarchy.MyClass">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAgACAAI=</HashCode>
+      <FileName>MyClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="students" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_01SchoolHierarchy.Person">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01SchoolHierarchy.School">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="classStudents" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_01SchoolHierarchy.Student">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="_01SchoolHierarchy.Person" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="2.699" />
+        <Point X="6.5" Y="2.875" />
+        <Point X="7.75" Y="2.875" />
+        <Point X="7.75" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_01SchoolHierarchy.Teacher">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="setDisciplines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
