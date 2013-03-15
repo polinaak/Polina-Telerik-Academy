@@ -42,6 +42,7 @@ namespace _01SchoolHierarchy
             students[1] = st2;
             students[2] = st3;
             MyClass firstClass = new MyClass(teacher, students, "10A");
+            Console.WriteLine("Test: " + st2.Name + " " + st.ClassNumber + " " + st2.Comment);
 
             //School
             School testClass = new School(students);

@@ -10,7 +10,7 @@ namespace _01SchoolHierarchy
     {
         //Fields
         private string name;
-        private string comment { get; set; }
+        private string comment;
 
         //Constructors
         public Person(string name)
@@ -43,6 +43,12 @@ namespace _01SchoolHierarchy
                 }
                 this.name = value;
             }
+        }
+
+        public string Comment
+        {
+            get { return this.comment; }
+            set { this.comment = value; }
         }
     }
 }

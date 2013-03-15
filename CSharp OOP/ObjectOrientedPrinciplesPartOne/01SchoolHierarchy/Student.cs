@@ -9,7 +9,7 @@ namespace _01SchoolHierarchy
     public class Student : Person
     {
         //Field
-        private int classNumber { get; set; }
+        private int classNumber;
 
         //Constructor
         public Student(string name, int classNumber)
@@ -20,6 +20,13 @@ namespace _01SchoolHierarchy
             : base(name, comment)
         {
             this.classNumber = classNumber;
+        }
+
+        //Property
+        public int ClassNumber
+        {
+            get { return this.classNumber; }
+            set { this.classNumber = value; }
         }
     }
 }

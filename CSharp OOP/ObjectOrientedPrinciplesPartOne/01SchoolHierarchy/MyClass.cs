@@ -67,5 +67,11 @@ namespace _01SchoolHierarchy
                 this.textID = value;
             }
         }
+
+        public string Comment
+        {
+            get { return this.comment; }
+            set { this.comment = value; }
+        }
     }
 }
