@@ -1,0 +1,38 @@
+﻿<button data-bind="click:logout" id="logout">Logout</button>
+<button  id="btn-view-logs">View Logs</button>
+<fieldset>
+    <legend>Deposit</legend>
+    <label for="sum">sum:</label>
+    <input class="k-input" data-bind="value:sum" type="number" />
+    <button class="k-button" data-bind="click:deposit" id="deposit">Deposit</button>
+</fieldset>
+<fieldset>
+    <legend>Withdraw</legend>
+    <label for="withdrawSum">sum:</label>
+    <input class="k-input" data-bind="value:withdrawSum" type="number" />
+    <button class="k-button" data-bind="click:withdraw" id="withdraw">Withdraw</button>
+</fieldset>
+<fieldset>
+    <legend>Create Account</legend>
+    <label for="createAccount">create:</label>
+    <input class="k-input" data-bind="value:account" type="number" />
+    <button class="k-button" data-bind="click:createAcc">Create account</button>
+</fieldset>
+<div id="view-logs"></div>
+ <div id="example" class="k-content">
+    <div id="background">
+		<div id="calendar"></div>
+	</div>
+   
+    <style scoped>
+        #background {
+            width: 254px;
+			height: 250px;
+			margin: 30px auto;
+			padding: 69px 0 0 11px;
+        }
+		#calendar {
+			width: 241px;
+		}
+    </style>
+</div>

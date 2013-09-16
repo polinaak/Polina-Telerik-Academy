@@ -1,0 +1,13 @@
+﻿<div id="validateUsernameAndPass" class="k-content">
+    <fieldset>
+        <legend>Login</legend>
+        <label for="tb-username">username:</label>
+        <input class="k-input" type="text" data-bind="value : username" name="username-validation required" validationMessage="Please enter username!" id="tb-username"/>
+        <label for="tb-password">password:</label>
+        <input  class="k-input" type="password" name="pass-validation" required data-bind="value:password" validationMessage="Please enter password!" id="tb-password" />
+        <button class="k-button" data-bind="click:login" id="validateLogin">Login</button>
+        <button class="k-button" data-bind="click:register" id="validateRegister">Register</button>
+        <button class="k-button" id="btn-about">About</button>
+    </fieldset>
+</div>
+<div id="state"></div>
