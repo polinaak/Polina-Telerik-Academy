@@ -1,0 +1,11 @@
+﻿<button id="viewAllTodos">all todo lists</button>
+<div id="all-todo-list"></div>
+
+<fieldset class="k-group k-block">
+    <legend>Add TODO list</legend>
+    <label for="tb-title">Title:</label>
+    <input type="text" data-bind="value : title" id="tb-title" class="k-textbox"/><br />
+    <label for="tb-todos">Todos:</label>
+    <input type="text" data-bind="value : todos" id="tb-todos" class="k-textbox"/><br />
+    <button data-bind="click:addList" class="k-button">Add</button>
+</fieldset>

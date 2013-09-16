@@ -1,0 +1,15 @@
+﻿<button id="viewAll">all appointments</button>
+<div id="all-appointments"></div>
+
+<fieldset class="k-group k-block">
+    <legend>Add appointment</legend>
+    <label for="tb-subject">Subject:</label>
+    <input type="text" data-bind="value : subject" id="tb-subject" class="k-textbox"/><br />
+    <label for="tb-description">Description:</label>
+    <input type="text" data-bind="value:description" id="tb-description" class="k-textbox"/><br />
+    <label for="tb-appointmentDate">AppointmentDate:</label>
+    <input type="text" data-bind="value : appointmentDate" id="tb-appointmentDate" class="k-textbox"/><br />
+    <label for="tb-duration">Duration:</label>
+    <input type="text" data-bind="value : duration" id="tb-duration" class="k-textbox"/><br />
+    <button data-bind="click:create" class="k-button">Add</button>
+</fieldset>

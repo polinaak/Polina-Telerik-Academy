@@ -1,0 +1,16 @@
+﻿<div data-template="single-todo-template" data-bind="source: list">
+</div>
+
+<script type="text/x-kendo-template" id="single-todo-template">
+    <h2>#: title #</h2>
+    <div>
+        <strong>To do: </strong>
+         # for(var i = 0; i < todos.length; i++) { #
+        <div id="todo-#= i + 1 #">
+            <strong>#= todos[i].text #</strong>
+        </div>
+        # } # 
+    </div>
+</script>
+
+<button id="addTodo">Add todo</button>
