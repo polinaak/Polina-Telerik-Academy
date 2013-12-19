@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Titanium Places</title>
+
+    <link href="Styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="Styles/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/index.css" rel="stylesheet" />
+    
+    <script src="Scripts/libs/sha1.js"></script>
+    <script src="Scripts/libs/class.js"></script>
+    <script src="Scripts/libs/jquery.min.js"></script>
+    <script src="Scripts/libs/kendo.web.min.js"></script>
+    <script src="Scripts/libs/rsvp.min.js"></script>
+    <script src="Scripts/app/requester.js"></script>
+    <script src="Scripts/app/persister.js"></script>
+    <script src="Scripts/app/view-models.js"></script>
+    <script src="Scripts/app/views.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/libs/image-uploader.js"></script>
+</head>
+<body class="k-group">
+   
+    <script type="text/x-kendo-tmpl" id="listViewTemplate">
+        <div id="listViewContainer">
+        # for (var i = 0; i < data.imageUrls.length; i++) { #
+            <div class="imageContainer k-item">
+            <img class="placeThumb" src="#= data.imageUrls[i] #" />
+            <p></p>
+            </div>
+        # } #
+        </div>
+    </script>
+
+    <div id="menu" class="k-group">
+    <span id="greeting"></span>
+    <button id="btn-about" class="k-button">about us</button>
+    <button id="logout" class="k-button">logout</button>
+    </div>
+    <header>
+        <h1>Places</h1>
+    </header>
+    <div id="app">
+    </div>
+    <footer class="k-footer">
+        <h3>Lets travel!</h3>
+    </footer>
+
+</body>
+</html>

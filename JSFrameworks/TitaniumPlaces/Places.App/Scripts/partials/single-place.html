@@ -1,0 +1,36 @@
+﻿<div data-template="single-place-template" data-bind="source: place">
+</div>
+
+<script type="text/x-kendo-template" id="single-place-template">
+    <h2>#: name #</h2>
+    <div id="placeLocationInfo">
+        <strong>Country: </strong>
+        <span>#: country.name #</span><br />
+        <strong>Town: </strong>
+        <span>#: town.name #</span>
+    </div>
+
+    <strong>Info</strong>
+    <div id="placeInfo">
+    <p>#: content #</p>
+    </div>
+    
+    <strong>Images</strong>
+    <div id="placeImages">
+        # for(var i = 0; i < imageUrls.length; i++) { #
+            <img class="k-image" src="#= imageUrls[i] #" id="#= i #"/>
+        # } #
+    </div>
+    
+    <div id="placeComments">
+    # for(var i = 0; i < comments.length; i++) { #
+        <div id="comment-#= i + 1 #">
+            <strong>Posted by #= comments[i].postedBy # on #= comments[i].date #</strong>
+            <p>#= comments[i].content #</p>
+        </div>
+    # } #
+    </div>
+
+    <a href="index.html\#/places/#: id#/addComment" class="k-button" id="addComment" onclick(>Add comment</a> <!-- TODO: onclick -> add comment-->
+    <a href="index.html\#/places/#: id#/addImage" class="k-button" id="addImage">Add image</a> <!-- TODO: onclick -> add image-->
+</script>

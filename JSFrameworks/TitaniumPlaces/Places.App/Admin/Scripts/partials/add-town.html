@@ -1,0 +1,10 @@
+﻿<select ng-options="country as country.name for country in countries" ng-model="selectedCountry" ng-change="change()">
+</select>
+
+<fieldset>
+	<legend>Create Town</legend>
+	<label for="tb-title">Name:</label>
+	<input type="text" id="tb-title" ng-model="newTown.name" />
+	<br />
+	<a class="btn btn-info" ng-click="addTown()">Submit</a>
+</fieldset>

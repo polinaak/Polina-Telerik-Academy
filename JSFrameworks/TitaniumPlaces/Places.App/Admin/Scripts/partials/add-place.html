@@ -1,0 +1,18 @@
+﻿<select ng-options="country as country.name for country in countries" ng-model="selectedCountry" ng-change="changeCountry()">
+</select>
+
+<select ng-options="town as town.name for town in singleCountry.towns" ng-model="selectedTown" ng-change="changeTown()">
+</select>
+
+<fieldset>
+    <legend>Create Place</legend>
+    <label for="tb-title">Name:</label>
+    <input type="text" id="tb-title" ng-model="newPlace.name" />
+    <br />
+    <label for="tb-content">Content:</label>
+    <textarea id="tb-content" ng-model="newPlace.content"></textarea>
+    <br />
+    <input type="hidden" id="tb-townId" ng-model="newPlace.townId" />
+    <br />
+    <a class="btn btn-info" ng-click="addPlace()">Submit</a>
+</fieldset>

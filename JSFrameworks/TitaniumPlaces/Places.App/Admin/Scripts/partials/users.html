@@ -1,0 +1,19 @@
+﻿<ul>
+	<li ng-repeat="user in users">
+		<strong><a href="" ng-click="getId()">{{user.nickname}};</a></strong>
+        <input type="hidden" name="name" value="{{user.id}}" ng-model="user.id" />
+		<span>Role: {{user.role}};</span>
+	</li>
+</ul>	
+<hr>
+<fieldset id="f-set">
+	<legend>Edit User</legend>
+	<label for="tb-name">Nickname:</label>
+	<input type="text" id="tb-name" ng-model="editUser.nickname" />
+	<br />
+	<label for="tb-role">Role:</label>
+	<input type="text" id="tb-role" ng-model="editUser.role" />
+	<input type="hidden" id="user-id" ng-model="editUser.id" />
+	<br />
+	<a class="btn btn-info" ng-click="edit()">Submit</a>
+</fieldset>		

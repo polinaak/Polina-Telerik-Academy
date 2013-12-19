@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places.Models", "Places.Models\Places.Models.csproj", "{5F0B8284-2405-4D78-A5D1-A4E29381E525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places.Data", "Places.Data\Places.Data.csproj", "{0A008E4D-BE96-4B48-94E8-CAEBFFC1757C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places.App", "Places.App\Places.App.csproj", "{50945E3B-FC07-469C-A7B1-2C008257BF00}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs22
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Places.Models\\Places.Models.csproj
+		SccProjectName1 = Places.Models
+		SccLocalPath1 = Places.Models
+		SccProjectUniqueName2 = Places.Data\\Places.Data.csproj
+		SccProjectName2 = Places.Data
+		SccLocalPath2 = Places.Data
+		SccProjectUniqueName3 = Places.App\\Places.App.csproj
+		SccProjectName3 = Places.App
+		SccLocalPath3 = Places.App
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F0B8284-2405-4D78-A5D1-A4E29381E525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0B8284-2405-4D78-A5D1-A4E29381E525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0B8284-2405-4D78-A5D1-A4E29381E525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0B8284-2405-4D78-A5D1-A4E29381E525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A008E4D-BE96-4B48-94E8-CAEBFFC1757C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A008E4D-BE96-4B48-94E8-CAEBFFC1757C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A008E4D-BE96-4B48-94E8-CAEBFFC1757C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A008E4D-BE96-4B48-94E8-CAEBFFC1757C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50945E3B-FC07-469C-A7B1-2C008257BF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50945E3B-FC07-469C-A7B1-2C008257BF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50945E3B-FC07-469C-A7B1-2C008257BF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50945E3B-FC07-469C-A7B1-2C008257BF00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
