@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sales>
+  <sale vendor="Beer Zagorka">
+    <summary date="20-Jul-2013" total-sum="247.00" />
+    <summary date="21-Jul-2013" total-sum="920.54" />
+    <summary date="22-Jul-2013" total-sum="597.60" />
+  </sale>
+  <sale vendor="Vodka Targovishte">
+    <summary date="20-Jul-2013" total-sum="102.75" />
+    <summary date="21-Jul-2013" total-sum="170.70" />
+    <summary date="22-Jul-2013" total-sum="125.20" />
+  </sale>
+</sales>
