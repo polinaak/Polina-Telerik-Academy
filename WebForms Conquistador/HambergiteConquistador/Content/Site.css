@@ -1,0 +1,33 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* styles for removing the background from form */
+.no-color {
+  background-color: white;
+  border-style:none;
+}
+
+div.notificationsBox {
+    height:100px;
+}
+
+.list-group-item .list-group-item-text span {
+    color:#718eef;
+}
+
+div.edit-content{
+    padding:10px;
+}
+
+tr td input[type="radio"] {
+display: inline-block;
+margin: 5px 5px;
+}
+
+tr td label {
+display: inline-block;
+position: relative;
+margin: 5px 10px;
+}
