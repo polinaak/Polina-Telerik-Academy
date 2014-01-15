@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TicketingSystem.ViewModels.TicketViewModel>
+<h1>Ticketing System</h1>
+
+<div class="row">
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        var ticket = Model.ElementAt(i);
+        <div class="span4">
+            <h2>
+                @ticket.Title
+            </h2>
+            <p><strong>Category: </strong> @ticket.Category</p>
+            <p><strong>Author: </strong> @ticket.Author</p>
+            <p>@ticket.Comments comment(s)</p>
+            <p><a class="btn" href="@Url.Action("Details", "Tickets", new { id = ticket.TicketId })">More Details...</a> </p>
+        </div>
+        if ((i + 1) % 3 == 0)
+        {
+            @:</div>
+        @:<div class="row">
+       }
+    }
+</div>

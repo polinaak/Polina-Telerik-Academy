@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BirthdayPresentPlanner.Models.ViewModels.QuestionnaireViewModel>
+
+@{
+    ViewBag.Title = "User Quests";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { employeeId = ViewBag.EmployeeId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>    
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>        
+        <td>           
+            @Html.ActionLink("Details", "Details", new { id=item.Id })          
+        </td>
+    </tr>
+}
+
+</table>

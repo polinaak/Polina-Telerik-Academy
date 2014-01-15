@@ -1,0 +1,36 @@
+﻿<h2>Administration</h2>
+
+@(Html.Kendo()
+    .Grid<LaptopSystem.ViewModels.CommentViewModel>()
+    .Name("comments-grid")
+    .Pageable()
+    .Sortable()
+    .Editable(edit =>
+            {
+                edit.Mode(GridEditMode.InLine);
+            })
+    .Filterable()
+    .Columns(col =>
+            {
+                col.Bound(m => m.Content);
+                col.Bound(m => m.CommentedBy);
+                col.Command(com =>
+                            {
+                                com.Edit();
+                                com.Destroy();
+                            }).Title("Commands");
+            })
+    .DataSource(data =>
+            {
+                data.Ajax()
+                    .ServerOperation(true)
+                    .PageSize(10)
+                    .Model(m =>
+                        {
+                            m.Id("CommentId");
+                            m.Field(com => com.CommentedBy).Editable(false);
+                        })
+                    .Read("ReadComments", "CommentsAdministration")
+                    .Update("UpdateComment", "CommentsAdministration")
+                    .Destroy("DestroyComment", "CommentsAdministration");
+            }))

@@ -1,0 +1,22 @@
+@model IList<FoodAndAlchoholEverywhere.Models.Drink>
+
+@{
+    ViewBag.Title = "Drinks";
+}
+
+<h2>Drinks</h2>
+<table>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                   @Html.ActionLink(item.Name, "ShowDetails/", new { item.Id})
+                </td>
+                <td>
+                    @item.Type
+                </td>
+            </tr>
+        }
+    }
+</table>

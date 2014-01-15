@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BirthdayPresentPlanner.Models.Present>
+
+@{
+    ViewBag.Title = "Choose a present";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Vote", "VotePresent", new { id = item.Id, questId = ViewBag.QuestId })
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@Html.ActionLink("Show statistics", "ShowStat", new { questId = ViewBag.QuestId })
+
+

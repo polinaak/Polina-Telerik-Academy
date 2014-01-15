@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Twitter.ViewModels.SearchedTweet>
+
+@{
+    ViewBag.Title = "AutoComplete";
+}
+
+<h2>AutoComplete</h2>
+
+@(Html.Kendo().AutoComplete()
+          .Name("tweets")
+          .DataTextField("Message")
+          .Filter(FilterType.Contains)
+          .MinLength(3)
+          .Placeholder("Enter tag...")
+          .HtmlAttributes(new { style = "width:250px" })
+          .DataSource(source =>
+          {
+              source.Read(read =>
+              {
+                  read.Action("GetTweets", "Home")
+                      .Data("onAdditionalData");
+              })
+              .ServerFiltering(true);
+          })
+)
+<script>
+    function onAdditionalData() {
+        return {
+            text: $("#tweets").val()
+        };
+    }
+</script>
+@*<style scoped>
+    .demo-section {
+        width: 250px;
+        margin: 35px auto 50px;
+        padding: 30px;
+    }
+
+        .demo-section h2 {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+</style>*@

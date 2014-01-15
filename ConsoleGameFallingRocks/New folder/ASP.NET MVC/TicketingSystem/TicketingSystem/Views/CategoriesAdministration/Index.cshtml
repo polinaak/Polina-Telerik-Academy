@@ -1,0 +1,41 @@
+﻿<h2>Index</h2>
+
+@(Html.Kendo()
+    .Grid<TicketingSystem.ViewModels.CategoryViewModel>()
+    .Name("comments-grid")
+    .Pageable()
+    .Sortable()
+    .Editable(edit =>
+            {
+                edit.Mode(GridEditMode.InLine);
+            })
+    .Filterable()
+         .ToolBar(tool =>
+            {
+                tool.Create();
+            })
+    .Columns(col =>
+            {
+                col.Bound(m => m.CategoryId);
+                col.Bound(m => m.Name);
+                col.Command(com =>
+                            {
+                                com.Edit();
+                                com.Destroy();
+                            }).Title("Commands");
+            })
+    .DataSource(data =>
+            {
+                data.Ajax()
+                    .ServerOperation(true)
+                    .PageSize(10)
+                    .Model(m =>
+                        {
+                            m.Id("CategoryId");
+                            m.Field(com => com.Name).Editable(false);
+                        })
+                    .Read("ReadCategories", "CategoriesAdministration")
+                    .Create("CreateCategories", "CategoriesAdministration")
+                    .Update("UpdateCategories", "CategoriesAdministration")
+                    .Destroy("DestroyCategories", "CategoriesAdministration");
+            }))

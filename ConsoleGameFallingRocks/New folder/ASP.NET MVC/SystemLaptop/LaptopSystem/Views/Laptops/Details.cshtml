@@ -1,0 +1,77 @@
+﻿@model LaptopSystem.ViewModels.LaptopDetailsViewModel
+
+<h1>Laptop System</h1>
+
+<h2>@Model.Manufacturer @Model.Model</h2>
+
+<div class="row">
+    <div class="span4">
+        <p>
+            <strong>Monitor: </strong>@Model.Monitor"
+        </p>
+        <p>
+            <strong>RAM: </strong>@Model.RAM GB
+        </p>
+        <p>
+            <strong>Price: </strong>$@Model.Price
+        </p>
+    </div>
+    <div class="span4">
+        <img src="@Model.ImageUrl" alt="@Model.Manufacturer" />
+    </div>
+    <div class="span4">
+        <p>
+            <strong>Weight: </strong>@Model.Weight kg
+        </p>
+        <p>
+            <strong>Additional Parts: </strong>@Model.AdditionalParts
+        </p>
+        <p>
+            <strong>Description: </strong>@Model.Description
+        </p>
+    </div>
+</div>
+<div class="span12">
+    <div class="span7">
+        Votes:<span id="laptop-votes"> @Model.Votes</span>
+        @if (User.Identity.IsAuthenticated && Model.UserCanVote)
+        {
+            @Ajax.ActionLink("Vote", "Vote", new { id = Model.LaptopId }, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "laptop-votes", HttpMethod = "Post", OnSuccess = "hideVoteButton" }, new { id = "vote-button", @class = "btn" })
+        }
+
+        <div id="comments">
+            @for (int i = 0; i < @Model.Comments.Count(); i++)
+            {
+                var comment = Model.Comments.ElementAt(i);
+                @Html.Partial("_CommentPartial", comment)
+            }
+            </div>
+    </div>
+</div>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="span7">
+        <p><strong>Add comment:</strong></p>
+        @using (Ajax.BeginForm("PostComment", new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.InsertAfter, UpdateTargetId = "comments", OnFailure = "commentPostFailure" }))
+        {
+            @Html.Hidden("LaptopId", Model.LaptopId)
+            @Html.TextArea("Comment")
+         //   @Html.AntiForgeryToken()
+            <input type="submit" value="Submit comment" />
+        }
+    </div>
+}
+
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script>
+        function hideVoteButton() {
+            $('#vote-button').hide();
+        }
+
+        function commentPostFailure() {
+            alert("error");
+        }
+    </script>
+
+}

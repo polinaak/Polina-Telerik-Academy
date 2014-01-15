@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Food & Alcohol Everywhere", "Index", "Home", null, new { @class = "brand" })
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li>@Html.ActionLink("Food", "Index", "Food")</li>
+                        <li>@Html.ActionLink("Drinks", "Index", "Drinks")</li>
+                        <li>@Html.ActionLink("Recipes", "Index", "Recipes", new { area = "Recipes" }, null)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+       
+        @Html.Partial("_Logo")
+        @RenderBody()
+        @RenderSection("scripts", required: false)
+        @{
+            if (IsSectionDefined("navbar"))
+            {
+                @RenderSection("navbar", required: true)
+            }
+        }
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
+

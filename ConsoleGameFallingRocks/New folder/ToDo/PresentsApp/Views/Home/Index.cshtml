@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PresentsApp.Models.ViewModels.EmployeeViewModel>
+
+<h2>All Employees:</h2>
+
+@foreach(var item in Model){
+<div>
+    @item.FirstName @item.LastName
+</div>
+ <div>
+     @Html.ActionLink("Show all quests", "ShowQuests", "Quest", new {userId = item.EmployeeId}, null)
+ </div>
+}
+
+<div>
+
+</div>
+
+
+
+
+
+
+
+

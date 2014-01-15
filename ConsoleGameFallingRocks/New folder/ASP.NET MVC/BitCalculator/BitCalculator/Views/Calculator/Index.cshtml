@@ -1,0 +1,38 @@
+@model IList<BitCalculator.Models.Unit>
+
+@{
+    ViewBag.Title = "Bit Calculator";
+}
+
+@{
+    var selectedList = Model.Select(x => new SelectListItem()
+    {   
+        Selected = false,
+        Text = x.Name
+    }); 
+}
+<h2>Bit Calculator</h2>
+
+@using (Html.BeginForm("Calculate", "Calculator", FormMethod.Post))
+{
+    @Html.Label("Quantity:");
+    @Html.TextBox("count", 1);
+    <br />
+    @Html.Label("Type:")
+    @Html.DropDownList("types", selectedList)
+    <br />
+    @Html.Label("Kilo:")
+    <select name="kilo">
+        <option>1000</option>
+        <option>1024</option>
+    </select>
+    <br />
+    <input type="submit" value="Go" />
+}
+
+@{
+    foreach (var unit in Model)
+    {
+        <div>@unit.Name <strong>@unit.Value</strong></div>
+    }
+}

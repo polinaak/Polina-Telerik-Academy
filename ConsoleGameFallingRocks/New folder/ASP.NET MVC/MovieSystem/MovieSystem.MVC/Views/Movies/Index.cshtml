@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MovieSystem.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movies</h2>
+ 
+<div id="result">
+    @{
+
+        Html.RenderPartial("_MovieList", Model);
+    }
+</div>

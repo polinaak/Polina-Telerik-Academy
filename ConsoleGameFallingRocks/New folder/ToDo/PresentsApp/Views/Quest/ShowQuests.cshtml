@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PresentsApp.Models.ViewModels.QuestViewModel>
+
+<h2>All Quests:</h2>
+
+@foreach (var item in Model) { 
+    <div>
+        @item.Year
+    </div>
+    <div>
+       @Html.ActionLink("Details", "ShowPresents", "Present", new { questId = item.QuestId}, null)
+    </div>
+}
+<div>
+    @Html.ActionLink("Create Quest", "Create")
+</div>

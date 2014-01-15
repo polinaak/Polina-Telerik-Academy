@@ -1,0 +1,27 @@
+﻿@model IEnumerable<KendoForMVCDemos.ViewModels.ShortBookViewModel>
+
+@{
+    ViewBag.Title = "AutoComplete";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@(Html
+    .Kendo()
+    .AutoComplete()
+    .Name("client-autocomplete")
+    .BindTo(Model)
+    .Filter(FilterType.Contains)
+    .MinLength(3)
+    .DataTextField("Title")
+    .Events(ev =>
+        {
+            ev.Select("selectAutoComplete");
+        })
+    .Placeholder("Enter book"))
+
+<script>
+    function selectAutoComplete(e) {
+        console.log(this.dataItem(e.item.index()).Id)
+    }
+</script>
